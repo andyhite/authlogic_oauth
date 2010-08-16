@@ -18,11 +18,11 @@ module AuthlogicOauth
   
   private
     def oauth_button(name, options = {})
-      "<input type='submit' value='#{options[:value]}' name='#{name}' id='user_submit' class='#{options[:class]}'/>"
+      submit_tag(options[:value], :name => name, :id => 'user_submit', :class => options[:class])
     end
 
     def oauth_image_button(name, image, options = {})
-      "<input type='image', src='#{image}' value='#{options[:value]}' name='#{name}' id='user_submit' class='#{options[:class]}'/>"
+      image_submit_tag(image, :name => name, :id => 'user_submit', :class => options[:class])
     end
   end
 end
