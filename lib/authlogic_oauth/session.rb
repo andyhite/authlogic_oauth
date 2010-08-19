@@ -65,7 +65,7 @@ module AuthlogicOauth
         end
 
         if !attempted_record
-          errors.add_to_base("Could not find user in our database, have you registered with your oauth account?")
+          errors.add(:base, "Could not find user in our database, have you registered with your oauth account?")
         end
       end
 
